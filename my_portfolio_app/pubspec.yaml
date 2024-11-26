@@ -30,11 +30,14 @@ environment:
 dependencies:
   carousel_slider: ^5.0.0
   cupertino_icons: ^1.0.8
+  emailjs: ^4.0.0
   flutter:
     sdk: flutter
+  flutter_mailer: ^2.1.2
   flutter_svg: ^2.0.10+1
   gif: ^2.3.0
   pdfx: ^2.8.0
+  typewritertext: ^3.0.9
   url_launcher: ^6.3.1
 
 dev_dependencies:
@@ -60,6 +63,7 @@ flutter:
     - lib/Resources/Images/
     - lib/Resources/Images/SkillsImages/
     - lib/Resources/Images/ProjectImages/
+    - lib/Resources/Gifs/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
   # For details regarding adding assets from package dependencies, see
@@ -70,33 +74,33 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: IBMPlexSerifBold
+    - family: PoppinsBold
       fonts:
-        - asset: lib/Resources/Fonts/IBMPlexSerif-Bold.ttf
-    - family: IBMPlexSerifLight
+        - asset: lib/Resources/Fonts/Poppins/Poppins-Bold.ttf
+    - family: PoppinsLight
       fonts:
-        - asset: lib/Resources/Fonts/IBMPlexSerif-Light.ttf
-    - family: IBMPlexSerifRegular
+        - asset: lib/Resources/Fonts/Poppins/Poppins-Light.ttf
+    - family: PoppinsRegular
       fonts:
-        - asset: lib/Resources/Fonts/IBMPlexSerif-Regular.ttf
-    - family: IBMPlexSerifSemiBold
+        - asset: lib/Resources/Fonts/Poppins/Poppins-Regular.ttf
+    - family: PoppinsSemiBold
       fonts:
-        - asset: lib/Resources/Fonts/IBMPlexSerif-SemiBold.ttf
-    - family: IBMPlexSerifExtraLight
+        - asset: lib/Resources/Fonts/Poppins/Poppins-SemiBold.ttf
+    - family: PoppinsExtraLight
       fonts:
-        - asset: lib/Resources/Fonts/IBMPlexSerif-ExtraLight.ttf
-    - family: IBMPlexSerifMedium
+        - asset: lib/Resources/Fonts/Poppins/Poppins-ExtraLight.ttf
+    - family: PoppinsMedium
       fonts:
-        - asset: lib/Resources/Fonts/IBMPlexSerif-Medium.ttf
-    - family: IBMPlexSerifItalic
+        - asset: lib/Resources/Fonts/Poppins/Poppins-Medium.ttf
+    - family: PoppinsItalic
       fonts:
-        - asset: lib/Resources/Fonts/IBMPlexSerif-Italic.ttf
-    - family: IBMPlexSerifBoldItalic
+        - asset: lib/Resources/Fonts/Poppins/Poppins-Italic.ttf
+    - family: PoppinsBoldItalic
       fonts:
-        - asset: lib/Resources/Fonts/IBMPlexSerif-BoldItalic.ttf
-    - family: IBMPlexSerifSemiBoldItalic
+        - asset: lib/Resources/Fonts/Poppins/Poppins-BoldItalic.ttf
+    - family: PoppinsSemiBoldItalic
       fonts:
-        - asset: lib/Resources/Fonts/IBMPlexSerif-SemiBoldItalic.ttf
+        - asset: lib/Resources/Fonts/Poppins/Poppins-SemiBoldItalic.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

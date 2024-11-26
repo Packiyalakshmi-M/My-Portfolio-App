@@ -5,6 +5,7 @@ import 'package:my_portfolio_app/Helpers/ResponsiveUI.dart';
 import 'package:my_portfolio_app/Helpers/Reusables/GradientText.dart';
 import 'package:my_portfolio_app/Helpers/Utilities/Utilities.dart';
 import 'package:my_portfolio_app/Resources/AppColors/AppColors.dart';
+import 'package:typewritertext/typewritertext.dart';
 
 class AboutScreen extends StatefulWidget {
   const AboutScreen({super.key});
@@ -46,9 +47,9 @@ class _AboutScreenState extends State<AboutScreen> {
                 Text(
                   "Nice to meet you!",
                   style: TextStyle(
-                    color: AppColors.appBackgroundBlack,
+                    color: AppColors.textColorWhite,
                     fontSize: ResponsiveUI.sp(18, context),
-                    fontFamily: 'IBMPlexSerifSemiBoldItalic',
+                    fontFamily: 'PoppinsSemiBoldItalic',
                   ),
                 ),
                 SizedBox(
@@ -57,9 +58,9 @@ class _AboutScreenState extends State<AboutScreen> {
                 // Text(
                 //   "ABOUT ME...",
                 //   style: TextStyle(
-                //     color: AppColors.appBackgroundBlack,
+                //     color: AppColors.textColorWhite,
                 //     fontSize: ResponsiveUI.sp(48, context),
-                //     fontFamily: 'IBMPlexSerifBold',
+                //     fontFamily: 'PoppinsBold',
                 //   ),
                 // ),
                 Column(
@@ -70,15 +71,16 @@ class _AboutScreenState extends State<AboutScreen> {
                       width: ResponsiveUI.w(800, context),
                       height: ResponsiveUI.h(250, context),
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            AppColors.gradientStartColor,
-                            AppColors.gradientMidColor,
-                            AppColors.gradientEndColor,
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
+                        color: AppColors.white.withOpacity(0.7),
+                        // gradient: LinearGradient(
+                        //   colors: [
+                        //     AppColors.gradientStartColor,
+                        //     AppColors.gradientMidColor,
+                        //     AppColors.gradientEndColor,
+                        //   ],
+                        //   begin: Alignment.topLeft,
+                        //   end: Alignment.bottomRight,
+                        // ),
                         shape: BoxShape.circle,
                       ),
                       // child: Image.asset(
@@ -95,20 +97,20 @@ class _AboutScreenState extends State<AboutScreen> {
                     //   style: TextStyle(
                     //     color: AppColors.appBackgroundBlack,
                     //     fontSize: ResponsiveUI.sp(48, context),
-                    //     fontFamily: 'IBMPlexSerifBold',
+                    //     fontFamily: 'PoppinsBold',
                     //   ),
                     // ),
-                    GradientText(
-                      text: "PACKIYALAKSHMI M",
-                      gradient: LinearGradient(colors: [
-                        AppColors.gradientStartColor,
-                        AppColors.gradientMidColor,
-                        AppColors.gradientEndColor,
-                      ]),
+                    Text(
+                      "PACKIYALAKSHMI M",
+                      // gradient: LinearGradient(colors: [
+                      //   AppColors.gradientStartColor,
+                      //   AppColors.gradientMidColor,
+                      //   AppColors.gradientEndColor,
+                      // ]),
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(48, context),
-                        fontFamily: 'IBMPlexSerifBold',
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                     SizedBox(
@@ -117,9 +119,9 @@ class _AboutScreenState extends State<AboutScreen> {
                     Text(
                       "Mobile app developer",
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(24, context),
-                        fontFamily: 'IBMPlexSerifBoldItalic',
+                        fontFamily: 'PoppinsBoldItalic',
                       ),
                     ),
                     SizedBox(
@@ -135,21 +137,21 @@ class _AboutScreenState extends State<AboutScreen> {
                           Text(
                             "Download resume",
                             style: TextStyle(
-                              color: AppColors.appBackgroundBlack,
+                              color: AppColors.textColorWhite,
                               fontSize: ResponsiveUI.sp(18, context),
-                              fontFamily: 'IBMPlexSerifMedium',
+                              fontFamily: 'PoppinsMedium',
                               decoration: TextDecoration.underline,
+                              decorationColor: AppColors.textColorWhite,
                             ),
                           ),
                           SizedBox(
                             width: ResponsiveUI.w(10, context),
                           ),
-                          SvgPicture.asset(
-                            'lib/Resources/Images/OpensiteArrow.svg',
-                            color: AppColors.appBackgroundBlack,
-                            height: ResponsiveUI.h(14, context),
-                            width: ResponsiveUI.h(14, context),
-                          )
+                          Image.asset(
+                            'lib/Resources/Images/ArrowWhite.png',
+                            height: ResponsiveUI.h(12, context),
+                            width: ResponsiveUI.h(12, context),
+                          ),
                         ],
                       ),
                     ),
@@ -171,9 +173,9 @@ class _AboutScreenState extends State<AboutScreen> {
                   Text(
                     "Hello there!",
                     style: TextStyle(
-                      color: AppColors.appBackgroundBlack,
+                      color: AppColors.textColorWhite,
                       fontSize: ResponsiveUI.sp(24, context),
-                      fontFamily: 'IBMPlexSerifSemiBold',
+                      fontFamily: 'PoppinsSemiBold',
                     ),
                   ),
                   SizedBox(
@@ -181,12 +183,14 @@ class _AboutScreenState extends State<AboutScreen> {
                   ),
                   SizedBox(
                     width: ResponsiveUI.w(1320, context),
-                    child: Text(
+                    child: TypeWriter.text(
                       "My name is Packiyalakshmi M. I am a mobile application developer, and I am passionate about delivering high-quality, responsive, and scalable mobile applications that translates business requiremets into practical, user-centric solutions using Flutter. ",
+                      maintainSize: true,
+                      duration: const Duration(milliseconds: 30),
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(18, context),
-                        fontFamily: 'IBMPlexSerifMedium',
+                        fontFamily: 'PoppinsMedium',
                       ),
                     ),
                   ),
@@ -197,7 +201,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     // width: ResponsiveUI.w(1320, context),
                     child: Divider(
                       height: ResponsiveUI.h(1, context),
-                      color: AppColors.appBackgroundBlack.withOpacity(0.3),
+                      color: AppColors.white.withOpacity(0.3),
                     ),
                   ),
                   SizedBox(
@@ -205,17 +209,17 @@ class _AboutScreenState extends State<AboutScreen> {
                   ),
                   Row(
                     children: [
-                      GradientText(
-                        text: "3",
-                        gradient: LinearGradient(colors: [
-                          AppColors.gradientStartColor,
-                          AppColors.gradientMidColor,
-                          AppColors.gradientEndColor,
-                        ]),
+                      Text(
+                        "3",
+                        // gradient: LinearGradient(colors: [
+                        //   AppColors.gradientStartColor,
+                        //   AppColors.gradientMidColor,
+                        //   AppColors.gradientEndColor,
+                        // ]),
                         style: TextStyle(
-                          color: AppColors.appBackgroundBlack,
+                          color: AppColors.textColorWhite,
                           fontSize: ResponsiveUI.sp(55, context),
-                          fontFamily: 'IBMPlexSerifBold',
+                          fontFamily: 'PoppinsBold',
                         ),
                       ),
                       SizedBox(
@@ -224,9 +228,9 @@ class _AboutScreenState extends State<AboutScreen> {
                       Text(
                         "Years Experience",
                         style: TextStyle(
-                          color: AppColors.appBackgroundBlack,
+                          color: AppColors.textColorWhite,
                           fontSize: ResponsiveUI.sp(18, context),
-                          fontFamily: 'IBMPlexSerifBoldItalic',
+                          fontFamily: 'PoppinsBoldItalic',
                         ),
                       ),
                     ],
@@ -238,7 +242,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     // width: ResponsiveUI.w(1320, context),
                     child: Divider(
                       height: ResponsiveUI.h(1, context),
-                      color: AppColors.appBackgroundBlack.withOpacity(0.3),
+                      color: AppColors.white.withOpacity(0.3),
                     ),
                   ),
                   SizedBox(
@@ -247,9 +251,9 @@ class _AboutScreenState extends State<AboutScreen> {
                   Text(
                     "Education",
                     style: TextStyle(
-                      color: AppColors.appBackgroundBlack,
+                      color: AppColors.textColorWhite,
                       fontSize: ResponsiveUI.sp(24, context),
-                      fontFamily: 'IBMPlexSerifSemiBold',
+                      fontFamily: 'PoppinsSemiBold',
                     ),
                   ),
                   SizedBox(
@@ -260,9 +264,9 @@ class _AboutScreenState extends State<AboutScreen> {
                     child: Text(
                       "B.E (ECE)",
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(16, context),
-                        fontFamily: 'IBMPlexSerifMedium',
+                        fontFamily: 'PoppinsMedium',
                       ),
                     ),
                   ),
@@ -274,9 +278,9 @@ class _AboutScreenState extends State<AboutScreen> {
                     child: Text(
                       "Einstein College of Engineering, Tirunelveli.",
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(16, context),
-                        fontFamily: 'IBMPlexSerifMedium',
+                        fontFamily: 'PoppinsMedium',
                       ),
                     ),
                   ),
@@ -288,9 +292,9 @@ class _AboutScreenState extends State<AboutScreen> {
                     child: Text(
                       "CGPA: 8.5",
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(16, context),
-                        fontFamily: 'IBMPlexSerifMedium',
+                        fontFamily: 'PoppinsMedium',
                       ),
                     ),
                   ),
@@ -301,7 +305,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     // width: ResponsiveUI.w(1320, context),
                     child: Divider(
                       height: ResponsiveUI.h(1, context),
-                      color: AppColors.appBackgroundBlack.withOpacity(0.3),
+                      color: AppColors.white.withOpacity(0.3),
                     ),
                   ),
                   SizedBox(
@@ -313,6 +317,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         'lib/Resources/Images/Dialer.svg',
                         height: ResponsiveUI.h(12, context),
                         width: ResponsiveUI.w(12, context),
+                        color: AppColors.white,
                       ),
                       SizedBox(
                         width: ResponsiveUI.w(15, context),
@@ -328,7 +333,7 @@ class _AboutScreenState extends State<AboutScreen> {
                           style: TextStyle(
                             color: AppColors.appBackgroundBlack,
                             fontSize: ResponsiveUI.sp(16, context),
-                            fontFamily: 'IBMPlexSerifBoldItalic',
+                            fontFamily: 'PoppinsBoldItalic',
                           ),
                         ),
                       ),
@@ -339,6 +344,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         'lib/Resources/Images/Email.svg',
                         height: ResponsiveUI.h(10, context),
                         width: ResponsiveUI.w(10, context),
+                        color: AppColors.white,
                       ),
                       SizedBox(
                         width: ResponsiveUI.w(15, context),
@@ -354,7 +360,7 @@ class _AboutScreenState extends State<AboutScreen> {
                           style: TextStyle(
                             color: AppColors.appBackgroundBlack,
                             fontSize: ResponsiveUI.sp(16, context),
-                            fontFamily: 'IBMPlexSerifBoldItalic',
+                            fontFamily: 'PoppinsBoldItalic',
                           ),
                         ),
                       ),
@@ -369,6 +375,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         'lib/Resources/Images/ProfileIcon.svg',
                         height: ResponsiveUI.h(11, context),
                         width: ResponsiveUI.w(11, context),
+                        color: AppColors.white,
                       ),
                       SizedBox(
                         width: ResponsiveUI.w(15, context),
@@ -383,7 +390,7 @@ class _AboutScreenState extends State<AboutScreen> {
                           style: TextStyle(
                             color: AppColors.appBackgroundBlack,
                             fontSize: ResponsiveUI.sp(16, context),
-                            fontFamily: 'IBMPlexSerifBoldItalic',
+                            fontFamily: 'PoppinsBoldItalic',
                           ),
                         ),
                       ),
@@ -394,6 +401,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         'lib/Resources/Images/LocationIcon.svg',
                         height: ResponsiveUI.h(13, context),
                         width: ResponsiveUI.w(13, context),
+                        color: AppColors.white,
                       ),
                       SizedBox(
                         width: ResponsiveUI.w(15, context),
@@ -403,7 +411,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         style: TextStyle(
                           color: AppColors.appBackgroundBlack,
                           fontSize: ResponsiveUI.sp(16, context),
-                          fontFamily: 'IBMPlexSerifBoldItalic',
+                          fontFamily: 'PoppinsBoldItalic',
                         ),
                       ),
                     ],

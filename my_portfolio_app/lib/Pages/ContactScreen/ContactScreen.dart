@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio_app/Helpers/AppConstants/AppConstants.dart';
 import 'package:my_portfolio_app/Helpers/ResponsiveUI.dart';
 import 'package:my_portfolio_app/Helpers/Utilities/Utilities.dart';
 import 'package:my_portfolio_app/Resources/AppColors/AppColors.dart';
+import 'package:emailjs/emailjs.dart' as emailjs;
 
 class ContactScreen extends StatefulWidget {
   const ContactScreen({super.key});
@@ -13,6 +13,10 @@ class ContactScreen extends StatefulWidget {
 }
 
 class _ContactScreenState extends State<ContactScreen> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _messageController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -33,9 +37,9 @@ class _ContactScreenState extends State<ContactScreen> {
               Text(
                 "Contact",
                 style: TextStyle(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.textColorWhite,
                   fontSize: ResponsiveUI.sp(18, context),
-                  fontFamily: 'IBMPlexSerifSemiBoldItalic',
+                  fontFamily: 'PoppinsSemiBoldItalic',
                 ),
               ),
               SizedBox(
@@ -44,20 +48,20 @@ class _ContactScreenState extends State<ContactScreen> {
               Text(
                 "REACH OUT ME",
                 style: TextStyle(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.textColorWhite,
                   fontSize: ResponsiveUI.sp(48, context),
-                  fontFamily: 'IBMPlexSerifBold',
+                  fontFamily: 'PoppinsBold',
                 ),
               ),
               SizedBox(
                 height: ResponsiveUI.h(30, context),
               ),
               Text(
-                "Surandai-627 859, Tenkasi District, \nTamilNadu, India",
+                "Surandai - 627 859, Tenkasi District, \nTamilNadu, India",
                 style: TextStyle(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.textColorWhite,
                   fontSize: ResponsiveUI.sp(16, context),
-                  fontFamily: 'IBMPlexSerifSemiRegular',
+                  fontFamily: 'PoppinsMedium',
                 ),
               ),
               SizedBox(
@@ -66,9 +70,9 @@ class _ContactScreenState extends State<ContactScreen> {
               Text(
                 "+91 9626508568",
                 style: TextStyle(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.textColorWhite,
                   fontSize: ResponsiveUI.sp(32, context),
-                  fontFamily: 'IBMPlexSerifBold',
+                  fontFamily: 'PoppinsBold',
                 ),
               ),
               SizedBox(
@@ -77,9 +81,9 @@ class _ContactScreenState extends State<ContactScreen> {
               Text(
                 "packiya2706.m@gmail.com",
                 style: TextStyle(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.textColorWhite,
                   fontSize: ResponsiveUI.sp(32, context),
-                  fontFamily: 'IBMPlexSerifBold',
+                  fontFamily: 'PoppinsBold',
                 ),
               ),
               SizedBox(
@@ -96,10 +100,11 @@ class _ContactScreenState extends State<ContactScreen> {
                     child: Text(
                       "LinkedIn",
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(16, context),
-                        fontFamily: 'IBMPlexSerifMedium',
+                        fontFamily: 'PoppinsMedium',
                         decoration: TextDecoration.underline,
+                        decorationColor: AppColors.textColorWhite,
                       ),
                     ),
                   ),
@@ -113,10 +118,11 @@ class _ContactScreenState extends State<ContactScreen> {
                     child: Text(
                       "GitHub",
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(16, context),
-                        fontFamily: 'IBMPlexSerifMedium',
+                        fontFamily: 'PoppinsMedium',
                         decoration: TextDecoration.underline,
+                        decorationColor: AppColors.textColorWhite,
                       ),
                     ),
                   ),
@@ -129,14 +135,10 @@ class _ContactScreenState extends State<ContactScreen> {
           ),
           Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  AppColors.gradientStartColor,
-                  AppColors.gradientMidColor,
-                  AppColors.gradientEndColor,
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+              // color: AppColors.white,
+              border: Border.all(
+                color: AppColors.white,
+                width: 2,
               ),
             ),
             child: Padding(
@@ -153,9 +155,9 @@ class _ContactScreenState extends State<ContactScreen> {
                   Text(
                     "CONTACT ME",
                     style: TextStyle(
-                      color: AppColors.appBackgroundWhite,
+                      color: AppColors.textColorWhite,
                       fontSize: ResponsiveUI.sp(40, context),
-                      fontFamily: 'IBMPlexSerifBold',
+                      fontFamily: 'PoppinsBold',
                     ),
                   ),
                   SizedBox(
@@ -167,28 +169,29 @@ class _ContactScreenState extends State<ContactScreen> {
                         height: ResponsiveUI.h(35, context),
                         width: ResponsiveUI.w(560, context),
                         child: TextFormField(
-                          cursorColor: AppColors.appBackgroundWhite,
+                          controller: _nameController,
+                          cursorColor: AppColors.white,
                           style: TextStyle(
-                            color: AppColors.appBackgroundWhite,
+                            color: AppColors.textColorWhite,
                             fontSize: ResponsiveUI.sp(16, context),
                             fontFamily: 'LatoRegular',
                           ),
                           decoration: InputDecoration(
                             labelText: 'NAME',
                             labelStyle: TextStyle(
-                              color: AppColors.appBackgroundWhite,
+                              color: AppColors.textColorWhite,
                               fontSize: ResponsiveUI.sp(16, context),
-                              fontFamily: 'IBMPlexSerifMedium',
+                              fontFamily: 'PoppinsMedium',
                             ),
                             floatingLabelBehavior: FloatingLabelBehavior.never,
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: AppColors.appBackgroundWhite,
+                                color: AppColors.white,
                               ),
                             ),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: AppColors.appBackgroundWhite,
+                                color: AppColors.white,
                               ),
                             ),
                           ),
@@ -201,28 +204,29 @@ class _ContactScreenState extends State<ContactScreen> {
                         height: ResponsiveUI.h(35, context),
                         width: ResponsiveUI.w(560, context),
                         child: TextFormField(
-                          cursorColor: AppColors.appBackgroundWhite,
+                          controller: _emailController,
+                          cursorColor: AppColors.white,
                           style: TextStyle(
-                            color: AppColors.appBackgroundWhite,
+                            color: AppColors.textColorWhite,
                             fontSize: ResponsiveUI.sp(16, context),
                             fontFamily: 'LatoRegular',
                           ),
                           decoration: InputDecoration(
                             labelText: 'EMAIL',
                             labelStyle: TextStyle(
-                              color: AppColors.appBackgroundWhite,
+                              color: AppColors.textColorWhite,
                               fontSize: ResponsiveUI.sp(16, context),
-                              fontFamily: 'IBMPlexSerifMedium',
+                              fontFamily: 'PoppinsMedium',
                             ),
                             floatingLabelBehavior: FloatingLabelBehavior.never,
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: AppColors.appBackgroundWhite,
+                                color: AppColors.white,
                               ),
                             ),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: AppColors.appBackgroundWhite,
+                                color: AppColors.white,
                               ),
                             ),
                           ),
@@ -237,31 +241,32 @@ class _ContactScreenState extends State<ContactScreen> {
                     height: ResponsiveUI.h(35, context),
                     width: ResponsiveUI.w(1210, context),
                     child: TextFormField(
-                      cursorColor: AppColors.appBackgroundWhite,
+                      controller: _messageController,
+                      cursorColor: AppColors.white,
                       keyboardType: TextInputType.multiline,
                       minLines: 1,
                       maxLines: 5,
                       style: TextStyle(
-                        color: AppColors.appBackgroundWhite,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(16, context),
                         fontFamily: 'LatoRegular',
                       ),
                       decoration: InputDecoration(
                         labelText: 'MESSAGE',
                         labelStyle: TextStyle(
-                          color: AppColors.appBackgroundWhite,
+                          color: AppColors.textColorWhite,
                           fontSize: ResponsiveUI.sp(16, context),
-                          fontFamily: 'IBMPlexSerifMedium',
+                          fontFamily: 'PoppinsMedium',
                         ),
                         floatingLabelBehavior: FloatingLabelBehavior.never,
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: AppColors.appBackgroundWhite,
+                            color: AppColors.white,
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: AppColors.appBackgroundWhite,
+                            color: AppColors.white,
                           ),
                         ),
                       ),
@@ -270,55 +275,95 @@ class _ContactScreenState extends State<ContactScreen> {
                   SizedBox(
                     height: ResponsiveUI.h(40, context),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.appBackgroundBlack,
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(
-                        ResponsiveUI.w(60, context),
-                        ResponsiveUI.h(10, context),
-                        ResponsiveUI.w(60, context),
-                        ResponsiveUI.h(10, context),
+                  GestureDetector(
+                    onTap: () async {
+                      try {
+                        emailjs.init(const emailjs.Options(
+                          publicKey: 'u-u6OouFhy8Nfsksp',
+                          privateKey: 'HGCkBJnzQCFSVcCfs_vVZ',
+                        ));
+
+                        var response = await emailjs.send(
+                          "service_8kt79ic",
+                          "template_dho237v",
+                          {
+                            'from_name': _nameController.text,
+                            'message': _messageController.text,
+                            'reply_to': _emailController.text,
+                          },
+                        );
+                        print('SUCCESS!');
+                        if (response.status == 200) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text("Notification mail sent!"),
+                            ),
+                          );
+                        }
+                      } catch (e) {
+                        print(e.toString());
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text("Something went wrong!"),
+                          ),
+                        );
+                      }
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: AppColors.white,
                       ),
-                      child: Row(
-                        children: [
-                          Text(
-                            'Submit now',
-                            style: TextStyle(
-                              color: AppColors.appBackgroundWhite,
-                              fontSize: ResponsiveUI.sp(18, context),
-                              fontFamily: 'IBMPlexSerifMedium',
-                            ),
-                          ),
-                          SizedBox(
-                            width: ResponsiveUI.w(12, context),
-                          ),
-                          Container(
-                            // width: ResponsiveUI.w(24, context),
-                            // height: ResponsiveUI.h(24, context),
-                            padding:
-                                EdgeInsets.all(ResponsiveUI.sp(4.2, context)),
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [
-                                  AppColors.gradientStartColor,
-                                  AppColors.gradientMidColor,
-                                  AppColors.gradientEndColor,
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(
+                          ResponsiveUI.w(40, context),
+                          ResponsiveUI.h(9, context),
+                          ResponsiveUI.w(40, context),
+                          ResponsiveUI.h(9, context),
+                        ),
+                        child: Row(
+                          children: [
+                            Text(
+                              'Submit now',
+                              style: TextStyle(
+                                color: AppColors.textColorBlack,
+                                fontSize: ResponsiveUI.sp(18, context),
+                                fontFamily: 'PoppinsMedium',
                               ),
                             ),
-                            child: Center(
-                              child: SvgPicture.asset(
-                                'lib/Resources/Images/OpensiteArrow.svg',
-                                width: ResponsiveUI.w(14, context),
-                                height: ResponsiveUI.h(14, context),
-                              ),
+                            SizedBox(
+                              width: ResponsiveUI.w(15, context),
                             ),
-                          )
-                        ],
+                            Container(
+                              // width: ResponsiveUI.w(24, context),
+                              // height: ResponsiveUI.h(24, context),
+                              padding: EdgeInsets.only(
+                                left: ResponsiveUI.w(10, context),
+                                right: ResponsiveUI.w(10, context),
+                                top: ResponsiveUI.h(2, context),
+                                bottom: ResponsiveUI.h(2, context),
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.black,
+                                // gradient: LinearGradient(
+                                //   colors: [
+                                //     AppColors.gradientStartColor,
+                                //     AppColors.gradientMidColor,
+                                //     AppColors.gradientEndColor,
+                                //   ],
+                                //   begin: Alignment.topLeft,
+                                //   end: Alignment.bottomRight,
+                                // ),
+                              ),
+                              child: Center(
+                                child: Image.asset(
+                                  'lib/Resources/Images/ArrowWhite.png',
+                                  width: ResponsiveUI.w(25, context),
+                                  height: ResponsiveUI.h(14, context),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),

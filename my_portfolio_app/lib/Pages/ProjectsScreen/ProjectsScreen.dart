@@ -38,9 +38,9 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
           child: Text(
             "PROJECTS",
             style: TextStyle(
-              color: AppColors.appBackgroundBlack,
+              color: AppColors.textColorWhite,
               fontSize: ResponsiveUI.sp(48, context),
-              fontFamily: 'IBMPlexSerifBold',
+              fontFamily: 'PoppinsBold',
             ),
           ),
         ),
@@ -57,7 +57,7 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                 autoPlayAnimationDuration: const Duration(seconds: 2),
                 enlargeCenterPage: true,
                 viewportFraction: 0.5,
-                enlargeFactor: 0.3),
+                enlargeFactor: 0.4),
             itemBuilder: (BuildContext context, int index, int realIndex) {
               return Padding(
                 padding: EdgeInsets.fromLTRB(
@@ -96,7 +96,7 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                               ResponsiveUI.sp(25, context),
                             ),
                           ),
-                          color: AppColors.primaryCardColor,
+                          color: AppColors.white.withOpacity(0.95),
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(
                               ResponsiveUI.w(40, context),
@@ -121,9 +121,9 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                                     Text(
                                       _projectsScreenVM.works[index].techStack,
                                       style: TextStyle(
-                                        color: AppColors.appBackgroundWhite,
+                                        color: AppColors.textColorBlack,
                                         fontSize: ResponsiveUI.sp(16, context),
-                                        fontFamily: 'IBMPlexSerifBoldItalic',
+                                        fontFamily: 'PoppinsBoldItalic',
                                       ),
                                     ),
                                   ],
@@ -134,9 +134,9 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                                 Text(
                                   _projectsScreenVM.works[index].title,
                                   style: TextStyle(
-                                    color: AppColors.appBackgroundWhite,
+                                    color: AppColors.textColorBlack,
                                     fontSize: ResponsiveUI.sp(28, context),
-                                    fontFamily: 'IBMPlexSerifBold',
+                                    fontFamily: 'PoppinsBold',
                                   ),
                                 ),
                                 SizedBox(
@@ -145,9 +145,9 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                                 Text(
                                   "Technologies used: ${_projectsScreenVM.works[index].technologiesUsed}",
                                   style: TextStyle(
-                                    color: AppColors.appBackgroundWhite,
+                                    color: AppColors.textColorBlack,
                                     fontSize: ResponsiveUI.sp(18, context),
-                                    fontFamily: 'IBMPlexSerifMedium',
+                                    fontFamily: 'PoppinsMedium',
                                   ),
                                 ),
                                 SizedBox(
@@ -157,10 +157,10 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                                   _projectsScreenVM.works[index].aboutProject,
                                   // maxLines: 2,
                                   style: TextStyle(
-                                    color: AppColors.appBackgroundWhite
+                                    color: AppColors.textColorBlack
                                         .withOpacity(0.7),
                                     fontSize: ResponsiveUI.sp(18, context),
-                                    fontFamily: 'IBMPlexSerifMedium',
+                                    fontFamily: 'PoppinsMedium',
                                   ),
                                 ),
                                 SizedBox(

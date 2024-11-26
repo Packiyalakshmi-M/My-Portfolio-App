@@ -36,13 +36,13 @@ class _RootScreenState extends State<RootScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.appBackgroundWhite,
+      backgroundColor: AppColors.appBarBackgroundColor,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(ResponsiveUI.h(50, context)),
         child: Center(
           child: Obx(
             () => AppBar(
-              backgroundColor: AppColors.appBackgroundBlack,
+              backgroundColor: AppColors.appBarBackgroundColor,
               leading: Padding(
                 padding: EdgeInsets.only(
                   left: ResponsiveUI.w(10, context),
@@ -79,11 +79,11 @@ class _RootScreenState extends State<RootScreen> {
                             ? ResponsiveUI.sp(20, context)
                             : ResponsiveUI.sp(18, context),
                         color: _rootScreenVM.isHomeSelected.value
-                            ? AppColors.white
-                            : AppColors.appBackgroundWhite,
+                            ? AppColors.appBarTextColor
+                            : AppColors.appBarTextColor,
                         fontFamily: _rootScreenVM.isHomeSelected.value
-                            ? 'IBMPlexSerifBold'
-                            : 'IBMPlexSerifRegular',
+                            ? 'PoppinsBold'
+                            : 'PoppinsRegular',
                       ),
                     ),
                   ),
@@ -112,11 +112,11 @@ class _RootScreenState extends State<RootScreen> {
                             ? ResponsiveUI.sp(20, context)
                             : ResponsiveUI.sp(18, context),
                         color: _rootScreenVM.isAboutSelected.value
-                            ? AppColors.white
-                            : AppColors.appBackgroundWhite,
+                            ? AppColors.appBarTextColor
+                            : AppColors.appBarTextColor,
                         fontFamily: _rootScreenVM.isAboutSelected.value
-                            ? 'IBMPlexSerifBold'
-                            : 'IBMPlexSerifRegular',
+                            ? 'PoppinsBold'
+                            : 'PoppinsRegular',
                       ),
                     ),
                   ),
@@ -145,11 +145,11 @@ class _RootScreenState extends State<RootScreen> {
                             ? ResponsiveUI.sp(20, context)
                             : ResponsiveUI.sp(18, context),
                         color: _rootScreenVM.isExperienceSelected.value
-                            ? AppColors.white
-                            : AppColors.appBackgroundWhite,
+                            ? AppColors.appBarTextColor
+                            : AppColors.appBarTextColor,
                         fontFamily: _rootScreenVM.isExperienceSelected.value
-                            ? 'IBMPlexSerifBold'
-                            : 'IBMPlexSerifRegular',
+                            ? 'PoppinsBold'
+                            : 'PoppinsRegular',
                       ),
                     ),
                   ),
@@ -178,11 +178,11 @@ class _RootScreenState extends State<RootScreen> {
                             ? ResponsiveUI.sp(20, context)
                             : ResponsiveUI.sp(18, context),
                         color: _rootScreenVM.isProjectsSelected.value
-                            ? AppColors.white
-                            : AppColors.appBackgroundWhite,
+                            ? AppColors.appBarTextColor
+                            : AppColors.appBarTextColor,
                         fontFamily: _rootScreenVM.isProjectsSelected.value
-                            ? 'IBMPlexSerifBold'
-                            : 'IBMPlexSerifRegular',
+                            ? 'PoppinsBold'
+                            : 'PoppinsRegular',
                       ),
                     ),
                   ),
@@ -211,11 +211,11 @@ class _RootScreenState extends State<RootScreen> {
                             ? ResponsiveUI.sp(20, context)
                             : ResponsiveUI.sp(18, context),
                         color: _rootScreenVM.isSkillsSelected.value
-                            ? AppColors.white
-                            : AppColors.appBackgroundWhite,
+                            ? AppColors.appBarTextColor
+                            : AppColors.appBarTextColor,
                         fontFamily: _rootScreenVM.isSkillsSelected.value
-                            ? 'IBMPlexSerifBold'
-                            : 'IBMPlexSerifRegular',
+                            ? 'PoppinsBold'
+                            : 'PoppinsRegular',
                       ),
                     ),
                   ),
@@ -244,11 +244,11 @@ class _RootScreenState extends State<RootScreen> {
                             ? ResponsiveUI.sp(20, context)
                             : ResponsiveUI.sp(18, context),
                         color: _rootScreenVM.isWorksSelected.value
-                            ? AppColors.white
-                            : AppColors.appBackgroundWhite,
+                            ? AppColors.appBarTextColor
+                            : AppColors.appBarTextColor,
                         fontFamily: _rootScreenVM.isWorksSelected.value
-                            ? 'IBMPlexSerifBold'
-                            : 'IBMPlexSerifRegular',
+                            ? 'PoppinsBold'
+                            : 'PoppinsRegular',
                       ),
                     ),
                   ),
@@ -277,11 +277,11 @@ class _RootScreenState extends State<RootScreen> {
                             ? ResponsiveUI.sp(20, context)
                             : ResponsiveUI.sp(18, context),
                         color: _rootScreenVM.isContactsSelected.value
-                            ? AppColors.white
-                            : AppColors.appBackgroundWhite,
+                            ? AppColors.appBarTextColor
+                            : AppColors.appBarTextColor,
                         fontFamily: _rootScreenVM.isContactsSelected.value
-                            ? 'IBMPlexSerifBold'
-                            : 'IBMPlexSerifRegular',
+                            ? 'PoppinsBold'
+                            : 'PoppinsRegular',
                       ),
                     ),
                   ),
@@ -302,7 +302,7 @@ class _RootScreenState extends State<RootScreen> {
               //             style: TextStyle(
               //               fontSize: ResponsiveUI.sp(18, context),
               //               color: AppColors.appBackgroundWhite,
-              //               fontFamily: 'IBMPlexSerifRegular',
+              //               fontFamily: 'PoppinsRegular',
               //             ),
               //           ),
               //         );
@@ -336,11 +336,11 @@ class _RootScreenState extends State<RootScreen> {
             curve: Curves.easeInOut,
           );
         },
-        backgroundColor: AppColors.appBackgroundBlack,
+        backgroundColor: AppColors.white,
         shape: const CircleBorder(),
         child: Icon(
           Icons.keyboard_arrow_up,
-          color: AppColors.white,
+          color: AppColors.black,
           size: ResponsiveUI.sp(24, context),
         ),
       ),

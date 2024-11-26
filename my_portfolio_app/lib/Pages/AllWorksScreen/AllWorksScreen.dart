@@ -59,9 +59,9 @@ class _AllWorksScreenState extends State<AllWorksScreen> {
                   Text(
                     "All Works",
                     style: TextStyle(
-                      color: AppColors.appBackgroundBlack,
+                      color: AppColors.textColorWhite,
                       fontSize: ResponsiveUI.sp(18, context),
-                      fontFamily: 'IBMPlexSerifSemiBoldItalic',
+                      fontFamily: 'PoppinsSemiBoldItalic',
                     ),
                   ),
                 ],
@@ -82,7 +82,7 @@ class _AllWorksScreenState extends State<AllWorksScreen> {
                       //     style: TextStyle(
                       //       color: AppColors.appBackgroundBlack,
                       //       fontSize: ResponsiveUI.sp(48, context),
-                      //       fontFamily: 'IBMPlexSerifBold',
+                      //       fontFamily: 'PoppinsBold',
                       //     ),
                       //   ),
                       //   children: const [
@@ -121,9 +121,9 @@ class _AllWorksScreenState extends State<AllWorksScreen> {
                                   title: Text(
                                     widget.works[index].title,
                                     style: TextStyle(
-                                      color: AppColors.appBackgroundBlack,
+                                      color: AppColors.textColorBlack,
                                       fontSize: ResponsiveUI.sp(35, context),
-                                      fontFamily: 'IBMPlexSerifBold',
+                                      fontFamily: 'PoppinsBold',
                                     ),
                                   ),
                                 );
@@ -142,10 +142,10 @@ class _AllWorksScreenState extends State<AllWorksScreen> {
                                       text: TextSpan(
                                           text: 'Technologies used: ',
                                           style: TextStyle(
-                                            color: AppColors.appBackgroundBlack,
+                                            color: AppColors.textColorBlack,
                                             fontSize:
                                                 ResponsiveUI.sp(18, context),
-                                            fontFamily: 'IBMPlexSerifSemiBold',
+                                            fontFamily: 'PoppinsSemiBold',
                                           ),
                                           children: [
                                             TextSpan(
@@ -153,11 +153,11 @@ class _AllWorksScreenState extends State<AllWorksScreen> {
                                                   .technologiesUsed,
                                               style: TextStyle(
                                                 color: AppColors
-                                                    .appBackgroundBlack,
+                                                    .textColorBlack,
                                                 fontSize: ResponsiveUI.sp(
                                                     16, context),
                                                 fontFamily:
-                                                    'IBMPlexSerifMedium',
+                                                    'PoppinsMedium',
                                               ),
                                             )
                                           ]),
@@ -182,11 +182,11 @@ class _AllWorksScreenState extends State<AllWorksScreen> {
                                               "\u2022 ${widget.works[index].bulletPoints[i]}",
                                               style: TextStyle(
                                                 color: AppColors
-                                                    .appBackgroundBlack,
+                                                    .textColorBlack,
                                                 fontSize: ResponsiveUI.sp(
                                                     16, context),
                                                 fontFamily:
-                                                    'IBMPlexSerifMedium',
+                                                    'PoppinsMedium',
                                               ),
                                             ),
                                           );
@@ -205,7 +205,7 @@ class _AllWorksScreenState extends State<AllWorksScreen> {
                                       child: Container(
                                         width: ResponsiveUI.w(350, context),
                                         decoration: BoxDecoration(
-                                          color: AppColors.appBackgroundWhite,
+                                          color: AppColors.black,
                                           borderRadius:
                                               BorderRadius.circular(50),
                                           border: Border.all(
@@ -235,11 +235,11 @@ class _AllWorksScreenState extends State<AllWorksScreen> {
                                               "Open in GitHub",
                                               style: TextStyle(
                                                 color: AppColors
-                                                    .appBackgroundBlack,
+                                                    .textColorWhite,
                                                 fontSize: ResponsiveUI.sp(
                                                     16, context),
                                                 fontFamily:
-                                                    'IBMPlexSerifMedium',
+                                                    'PoppinsMedium',
                                               ),
                                             ),
                                           ],

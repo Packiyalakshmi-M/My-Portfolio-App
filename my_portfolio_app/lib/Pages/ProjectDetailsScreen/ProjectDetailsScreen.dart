@@ -20,7 +20,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.appBackgroundWhite,
+      backgroundColor: AppColors.black,
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -46,7 +46,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                     child: Icon(
                       Icons.arrow_back,
                       size: ResponsiveUI.sp(28, context),
-                      color: AppColors.appBackgroundBlack,
+                      color: AppColors.white,
                     ),
                   ),
                   SizedBox(
@@ -55,9 +55,9 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                   Text(
                     widget.projectBO.title,
                     style: TextStyle(
-                      color: AppColors.appBackgroundBlack,
+                      color: AppColors.textColorWhite,
                       fontSize: ResponsiveUI.sp(28, context),
-                      fontFamily: 'IBMPlexSerifBold',
+                      fontFamily: 'PoppinsBold',
                     ),
                   ),
                 ],
@@ -68,9 +68,9 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
               Text(
                 widget.projectBO.aboutProject,
                 style: TextStyle(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.textColorWhite,
                   fontSize: ResponsiveUI.sp(18, context),
-                  fontFamily: 'IBMPlexSerifMedium',
+                  fontFamily: 'PoppinsMedium',
                 ),
               ),
               SizedBox(
@@ -80,17 +80,17 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                 text: TextSpan(
                   text: 'Technologies used: ',
                   style: TextStyle(
-                    color: AppColors.appBackgroundBlack,
+                    color: AppColors.textColorWhite,
                     fontSize: ResponsiveUI.sp(18, context),
-                    fontFamily: 'IBMPlexSerifSemiBold',
+                    fontFamily: 'PoppinsSemiBold',
                   ),
                   children: [
                     TextSpan(
                       text: widget.projectBO.technologiesUsed,
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(16, context),
-                        fontFamily: 'IBMPlexSerifMedium',
+                        fontFamily: 'PoppinsMedium',
                       ),
                     )
                   ],
@@ -110,9 +110,9 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                       child: Text(
                         "\u2022 ${widget.projectBO.description[index]}",
                         style: TextStyle(
-                          color: AppColors.appBackgroundBlack,
+                          color: AppColors.textColorWhite,
                           fontSize: ResponsiveUI.sp(16, context),
-                          fontFamily: 'IBMPlexSerifMedium',
+                          fontFamily: 'PoppinsMedium',
                         ),
                       ),
                     );

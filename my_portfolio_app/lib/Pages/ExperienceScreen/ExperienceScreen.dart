@@ -27,14 +27,9 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
       height: MediaQuery.of(context).size.height - 80,
       width: MediaQuery.of(context).size.width - 80,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            AppColors.gradientStartColor,
-            AppColors.gradientMidColor,
-            AppColors.gradientEndColor,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+        border: Border.all(
+          color: AppColors.white,
+          width: 2,
         ),
       ),
       child: Padding(
@@ -55,9 +50,9 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                 Text(
                   'MY EXPERIENCE',
                   style: TextStyle(
-                    color: AppColors.appBackgroundWhite,
+                    color: AppColors.textColorWhite,
                     fontSize: ResponsiveUI.sp(48, context),
-                    fontFamily: 'IBMPlexSerifBold',
+                    fontFamily: 'PoppinsBold',
                   ),
                 ),
                 SizedBox(
@@ -67,15 +62,16 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                   width: ResponsiveUI.w(800, context),
                   height: ResponsiveUI.h(250, context),
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        AppColors.gradientStartColor,
-                        AppColors.gradientMidColor,
-                        AppColors.gradientEndColor,
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
+                    color: AppColors.white.withOpacity(0.7),
+                    // gradient: LinearGradient(
+                    //   colors: [
+                    //     AppColors.gradientStartColor,
+                    //     AppColors.gradientMidColor,
+                    //     AppColors.gradientEndColor,
+                    //   ],
+                    //   begin: Alignment.topLeft,
+                    //   end: Alignment.bottomRight,
+                    // ),
                     shape: BoxShape.circle,
                   ),
                   // child: Image.asset(
@@ -89,7 +85,8 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: AppColors.appBackgroundBlack,
+                    color: AppColors.white,
+                    borderRadius: BorderRadius.circular(9),
                   ),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
@@ -107,9 +104,9 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                           Text(
                             'Download my resume',
                             style: TextStyle(
-                              color: AppColors.appBackgroundWhite,
+                              color: AppColors.textColorBlack,
                               fontSize: ResponsiveUI.sp(18, context),
-                              fontFamily: 'IBMPlexSerifMedium',
+                              fontFamily: 'PoppinsMedium',
                             ),
                           ),
                           SizedBox(
@@ -118,23 +115,28 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                           Container(
                             // width: ResponsiveUI.w(24, context),
                             // height: ResponsiveUI.h(24, context),
-                            padding:
-                                EdgeInsets.all(ResponsiveUI.sp(4.2, context)),
+                            padding: EdgeInsets.only(
+                              left: ResponsiveUI.w(10, context),
+                              right: ResponsiveUI.w(10, context),
+                              top: ResponsiveUI.h(2, context),
+                              bottom: ResponsiveUI.h(2, context),
+                            ),
                             decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [
-                                  AppColors.gradientStartColor,
-                                  AppColors.gradientMidColor,
-                                  AppColors.gradientEndColor,
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                              ),
+                              color: AppColors.black,
+                              // gradient: LinearGradient(
+                              //   colors: [
+                              //     AppColors.gradientStartColor,
+                              //     AppColors.gradientMidColor,
+                              //     AppColors.gradientEndColor,
+                              //   ],
+                              //   begin: Alignment.topLeft,
+                              //   end: Alignment.bottomRight,
+                              // ),
                             ),
                             child: Center(
-                              child: SvgPicture.asset(
-                                'lib/Resources/Images/OpensiteArrow.svg',
-                                width: ResponsiveUI.w(14, context),
+                              child: Image.asset(
+                                'lib/Resources/Images/ArrowWhite.png',
+                                width: ResponsiveUI.w(25, context),
                                 height: ResponsiveUI.h(14, context),
                               ),
                             ),
@@ -172,7 +174,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //                   style: TextStyle(
             //                     color: AppColors.appBackgroundWhite,
             //                     fontSize: ResponsiveUI.sp(18, context),
-            //                     fontFamily: 'IBMPlexSerifBoldItalic',
+            //                     fontFamily: 'PoppinsBoldItalic',
             //                   ),
             //                 ),
             //                 Text(
@@ -180,7 +182,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //                   style: TextStyle(
             //                     color: AppColors.appBackgroundWhite,
             //                     fontSize: ResponsiveUI.sp(16, context),
-            //                     fontFamily: 'IBMPlexSerifMedium',
+            //                     fontFamily: 'PoppinsMedium',
             //                   ),
             //                 ),
             //               ],
@@ -193,7 +195,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //               style: TextStyle(
             //                 color: AppColors.appBackgroundWhite,
             //                 fontSize: ResponsiveUI.sp(32, context),
-            //                 fontFamily: 'IBMPlexSerifBold',
+            //                 fontFamily: 'PoppinsBold',
             //               ),
             //             ),
             //           ],
@@ -221,7 +223,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //             style: TextStyle(
             //               color: AppColors.appBackgroundWhite,
             //               fontSize: ResponsiveUI.sp(18, context),
-            //               fontFamily: 'IBMPlexSerifBoldItalic',
+            //               fontFamily: 'PoppinsBoldItalic',
             //             ),
             //           ),
             //           Text(
@@ -229,7 +231,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //             style: TextStyle(
             //               color: AppColors.appBackgroundWhite,
             //               fontSize: ResponsiveUI.sp(16, context),
-            //               fontFamily: 'IBMPlexSerifMedium',
+            //               fontFamily: 'PoppinsMedium',
             //             ),
             //           ),
             //         ],
@@ -242,7 +244,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //         style: TextStyle(
             //           color: AppColors.appBackgroundWhite,
             //           fontSize: ResponsiveUI.sp(32, context),
-            //           fontFamily: 'IBMPlexSerifBold',
+            //           fontFamily: 'PoppinsBold',
             //         ),
             //       ),
             //       SizedBox(
@@ -267,7 +269,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //             style: TextStyle(
             //               color: AppColors.appBackgroundWhite,
             //               fontSize: ResponsiveUI.sp(18, context),
-            //               fontFamily: 'IBMPlexSerifBoldItalic',
+            //               fontFamily: 'PoppinsBoldItalic',
             //             ),
             //           ),
             //           Text(
@@ -275,7 +277,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //             style: TextStyle(
             //               color: AppColors.appBackgroundWhite,
             //               fontSize: ResponsiveUI.sp(16, context),
-            //               fontFamily: 'IBMPlexSerifMedium',
+            //               fontFamily: 'PoppinsMedium',
             //             ),
             //           ),
             //         ],
@@ -288,7 +290,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //         style: TextStyle(
             //           color: AppColors.appBackgroundWhite,
             //           fontSize: ResponsiveUI.sp(32, context),
-            //           fontFamily: 'IBMPlexSerifBold',
+            //           fontFamily: 'PoppinsBold',
             //         ),
             //       ),
             //       SizedBox(
@@ -313,7 +315,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //             style: TextStyle(
             //               color: AppColors.appBackgroundWhite,
             //               fontSize: ResponsiveUI.sp(18, context),
-            //               fontFamily: 'IBMPlexSerifBoldItalic',
+            //               fontFamily: 'PoppinsBoldItalic',
             //             ),
             //           ),
             //           Text(
@@ -321,7 +323,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //             style: TextStyle(
             //               color: AppColors.appBackgroundWhite,
             //               fontSize: ResponsiveUI.sp(16, context),
-            //               fontFamily: 'IBMPlexSerifMedium',
+            //               fontFamily: 'PoppinsMedium',
             //             ),
             //           ),
             //         ],
@@ -334,7 +336,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
             //         style: TextStyle(
             //           color: AppColors.appBackgroundWhite,
             //           fontSize: ResponsiveUI.sp(32, context),
-            //           fontFamily: 'IBMPlexSerifBold',
+            //           fontFamily: 'PoppinsBold',
             //         ),
             //       ),
             //       SizedBox(
@@ -368,14 +370,19 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                         () => AnimatedContainer(
                           duration: const Duration(milliseconds: 500),
                           child: Card(
+                            color: AppColors.black,
                             elevation: _experienceScreenVM.isHover.value &&
                                     _experienceScreenVM.hoverIndex.value ==
                                         index
                                 ? 25.0
                                 : 2.0,
-                            color: AppColors.primaryCardColor,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(25)),
+                              borderRadius: BorderRadius.circular(25),
+                              side: BorderSide(
+                                color: AppColors.white,
+                                width: 2,
+                              ),
+                            ),
                             child: Padding(
                               padding: EdgeInsets.fromLTRB(
                                 _experienceScreenVM.hoverIndex.value == index
@@ -405,20 +412,20 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                         _experienceScreenVM
                                             .experienceList[index].companyName,
                                         style: TextStyle(
-                                          color: AppColors.appBackgroundWhite,
+                                          color: AppColors.textColorWhite,
                                           fontSize:
                                               ResponsiveUI.sp(16, context),
-                                          fontFamily: 'IBMPlexSerifMedium',
+                                          fontFamily: 'PoppinsMedium',
                                         ),
                                       ),
                                       Text(
                                         _experienceScreenVM
                                             .experienceList[index].duration,
                                         style: TextStyle(
-                                          color: AppColors.appBackgroundWhite,
+                                          color: AppColors.textColorWhite,
                                           fontSize:
                                               ResponsiveUI.sp(18, context),
-                                          fontFamily: 'IBMPlexSerifBoldItalic',
+                                          fontFamily: 'PoppinsBoldItalic',
                                         ),
                                       ),
                                     ],
@@ -430,9 +437,9 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
                                     _experienceScreenVM
                                         .experienceList[index].title,
                                     style: TextStyle(
-                                      color: AppColors.appBackgroundWhite,
+                                      color: AppColors.textColorWhite,
                                       fontSize: ResponsiveUI.sp(32, context),
-                                      fontFamily: 'IBMPlexSerifBold',
+                                      fontFamily: 'PoppinsBold',
                                     ),
                                   ),
                                 ],

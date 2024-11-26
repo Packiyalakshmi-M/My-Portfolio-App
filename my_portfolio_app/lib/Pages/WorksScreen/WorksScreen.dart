@@ -37,11 +37,11 @@ class _WorksScreenState extends State<WorksScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Work",
+              "Works",
               style: TextStyle(
-                color: AppColors.appBackgroundBlack,
+                color: AppColors.textColorWhite,
                 fontSize: ResponsiveUI.sp(18, context),
-                fontFamily: 'IBMPlexSerifSemiBoldItalic',
+                fontFamily: 'PoppinsSemiBoldItalic',
               ),
             ),
             SizedBox(
@@ -50,9 +50,9 @@ class _WorksScreenState extends State<WorksScreen> {
             Text(
               "RECENT PROJECTS",
               style: TextStyle(
-                color: AppColors.appBackgroundBlack,
+                color: AppColors.textColorWhite,
                 fontSize: ResponsiveUI.sp(48, context),
-                fontFamily: 'IBMPlexSerifBold',
+                fontFamily: 'PoppinsBold',
               ),
             ),
             SizedBox(
@@ -83,7 +83,7 @@ class _WorksScreenState extends State<WorksScreen> {
                       duration: const Duration(milliseconds: 200),
                       // height: ResponsiveUI.h(100, context),
                       child: Card(
-                        color: AppColors.primaryCardColor,
+                        color: AppColors.black,
                         elevation: _worksScreenVM.isHover.value &&
                                 _worksScreenVM.hoverIndex.value == index
                             ? 50.0
@@ -91,6 +91,10 @@ class _WorksScreenState extends State<WorksScreen> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
                             ResponsiveUI.sp(25, context),
+                          ),
+                          side: BorderSide(
+                            width: 2,
+                            color: AppColors.white,
                           ),
                         ),
                         child: Padding(
@@ -121,11 +125,10 @@ class _WorksScreenState extends State<WorksScreen> {
                                       Text(
                                         _worksScreenVM.works[index].techStack,
                                         style: TextStyle(
-                                          color: AppColors.appBackgroundWhite,
+                                          color: AppColors.textColorWhite,
                                           fontSize:
                                               ResponsiveUI.sp(18, context),
-                                          fontFamily:
-                                              'IBMPlexSerifSemiBoldItalic',
+                                          fontFamily: 'PoppinsSemiBoldItalic',
                                         ),
                                       ),
                                     ],
@@ -142,9 +145,9 @@ class _WorksScreenState extends State<WorksScreen> {
                                       maxLines: 3,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
-                                        color: AppColors.appBackgroundWhite,
+                                        color: AppColors.textColorWhite,
                                         fontSize: ResponsiveUI.sp(40, context),
-                                        fontFamily: 'IBMPlexSerifBold',
+                                        fontFamily: 'PoppinsBold',
                                       ),
                                     ),
                                   ),
@@ -160,9 +163,9 @@ class _WorksScreenState extends State<WorksScreen> {
                                       maxLines: 3,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
-                                        color: AppColors.appBackgroundWhite,
+                                        color: AppColors.textColorWhite,
                                         fontSize: ResponsiveUI.sp(16, context),
-                                        fontFamily: 'IBMPlexSerifRegular',
+                                        fontFamily: 'PoppinsRegular',
                                       ),
                                     ),
                                   ),
@@ -171,10 +174,10 @@ class _WorksScreenState extends State<WorksScreen> {
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: AppColors.appBackgroundWhite,
+                                      color: AppColors.white,
                                       borderRadius: BorderRadius.circular(50),
                                       border: Border.all(
-                                        color: AppColors.appBackgroundBlack,
+                                        color: AppColors.black,
                                       ),
                                     ),
                                     padding: EdgeInsets.fromLTRB(
@@ -202,10 +205,10 @@ class _WorksScreenState extends State<WorksScreen> {
                                         Text(
                                           "GitHub",
                                           style: TextStyle(
-                                            color: AppColors.appBackgroundBlack,
+                                            color: AppColors.textColorBlack,
                                             fontSize:
                                                 ResponsiveUI.sp(16, context),
-                                            fontFamily: 'IBMPlexSerifMedium',
+                                            fontFamily: 'PoppinsMedium',
                                           ),
                                         ),
                                       ],
@@ -230,7 +233,7 @@ class _WorksScreenState extends State<WorksScreen> {
               },
             ),
             SizedBox(
-              height: ResponsiveUI.h(30, context),
+              height: ResponsiveUI.h(50, context),
             ),
             Visibility(
               visible: _worksScreenVM.works.length > 4 ? true : false,
@@ -249,21 +252,21 @@ class _WorksScreenState extends State<WorksScreen> {
                     Text(
                       "See all my works",
                       style: TextStyle(
-                        color: AppColors.appBackgroundBlack,
+                        color: AppColors.textColorWhite,
                         fontSize: ResponsiveUI.sp(18, context),
-                        fontFamily: 'IBMPlexSerifMedium',
+                        fontFamily: 'PoppinsMedium',
                         decoration: TextDecoration.underline,
+                        decorationColor: AppColors.textColorWhite,
                       ),
                     ),
                     SizedBox(
                       width: ResponsiveUI.w(10, context),
                     ),
-                    SvgPicture.asset(
-                      'lib/Resources/Images/OpensiteArrow.svg',
-                      color: AppColors.appBackgroundBlack,
+                    Image.asset(
+                      'lib/Resources/Images/ArrowWhite.png',
                       height: ResponsiveUI.h(12, context),
                       width: ResponsiveUI.h(12, context),
-                    )
+                    ),
                   ],
                 ),
               ),

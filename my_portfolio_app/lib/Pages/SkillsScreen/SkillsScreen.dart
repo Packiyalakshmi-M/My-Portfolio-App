@@ -57,9 +57,9 @@ class _SkillsScreenState extends State<SkillsScreen> {
               child: Text(
                 'SKILLS',
                 style: TextStyle(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.textColorWhite,
                   fontSize: ResponsiveUI.sp(48, context),
-                  fontFamily: 'IBMPlexSerifBold',
+                  fontFamily: 'PoppinsBold',
                 ),
               ),
             ),
@@ -69,9 +69,9 @@ class _SkillsScreenState extends State<SkillsScreen> {
             Text(
               'Technologies I Use',
               style: TextStyle(
-                color: AppColors.appBackgroundBlack,
+                color: AppColors.textColorWhite,
                 fontSize: ResponsiveUI.sp(32, context),
-                fontFamily: 'IBMPlexSerifSemiBold',
+                fontFamily: 'PoppinsSemiBold',
               ),
             ),
             SizedBox(
@@ -84,9 +84,9 @@ class _SkillsScreenState extends State<SkillsScreen> {
             Text(
               'Development & Productivity Tools I Use',
               style: TextStyle(
-                color: AppColors.appBackgroundBlack,
+                color: AppColors.textColorWhite,
                 fontSize: ResponsiveUI.sp(32, context),
-                fontFamily: 'IBMPlexSerifSemiBold',
+                fontFamily: 'PoppinsSemiBold',
               ),
             ),
             SizedBox(
@@ -100,7 +100,8 @@ class _SkillsScreenState extends State<SkillsScreen> {
               child: Container(
                 width: ResponsiveUI.w(470, context),
                 decoration: BoxDecoration(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(
@@ -119,9 +120,9 @@ class _SkillsScreenState extends State<SkillsScreen> {
                           Text(
                             'Download my resume',
                             style: TextStyle(
-                              color: AppColors.appBackgroundWhite,
-                              fontSize: ResponsiveUI.sp(18, context),
-                              fontFamily: 'IBMPlexSerifMedium',
+                              color: AppColors.textColorBlack,
+                              fontSize: ResponsiveUI.sp(16, context),
+                              fontFamily: 'PoppinsMedium',
                             ),
                           ),
                           SizedBox(
@@ -130,24 +131,29 @@ class _SkillsScreenState extends State<SkillsScreen> {
                           Container(
                             // width: ResponsiveUI.w(24, context),
                             // height: ResponsiveUI.h(24, context),
-                            padding:
-                                EdgeInsets.all(ResponsiveUI.sp(4.2, context)),
+                            padding: EdgeInsets.only(
+                              left: ResponsiveUI.w(10, context),
+                              right: ResponsiveUI.w(10, context),
+                              top: ResponsiveUI.h(2, context),
+                              bottom: ResponsiveUI.h(2, context),
+                            ),
                             decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [
-                                  AppColors.gradientStartColor,
-                                  AppColors.gradientMidColor,
-                                  AppColors.gradientEndColor,
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                              ),
+                              color: AppColors.black,
+                              // gradient: LinearGradient(
+                              //   colors: [
+                              //     AppColors.gradientStartColor,
+                              //     AppColors.gradientMidColor,
+                              //     AppColors.gradientEndColor,
+                              //   ],
+                              //   begin: Alignment.topLeft,
+                              //   end: Alignment.bottomRight,
+                              // ),
                             ),
                             child: Center(
-                              child: SvgPicture.asset(
-                                'lib/Resources/Images/OpensiteArrow.svg',
-                                width: ResponsiveUI.w(10, context),
-                                height: ResponsiveUI.h(10, context),
+                              child: Image.asset(
+                                'lib/Resources/Images/ArrowWhite.png',
+                                width: ResponsiveUI.w(25, context),
+                                height: ResponsiveUI.h(14, context),
                               ),
                             ),
                           )
@@ -185,9 +191,9 @@ class _SkillsScreenState extends State<SkillsScreen> {
             Text(
               item.stack,
               style: TextStyle(
-                color: AppColors.appBackgroundBlack,
+                color: AppColors.textColorWhite,
                 fontSize: 16,
-                fontFamily: 'IBMPlexSerifBoldItalic',
+                fontFamily: 'PoppinsBoldItalic',
               ),
             ),
           ],

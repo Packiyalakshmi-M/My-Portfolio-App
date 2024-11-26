@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gif/gif.dart';
 import 'package:my_portfolio_app/Helpers/AppConstants/AppConstants.dart';
 import 'package:my_portfolio_app/Helpers/ResponsiveUI.dart';
 import 'package:my_portfolio_app/Helpers/Utilities/Utilities.dart';
@@ -12,7 +13,15 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+  late final GifController _gifController;
+
+  @override
+  void initState() {
+    _gifController = GifController(vsync: this);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -42,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
               //       style: TextStyle(
               //         color: AppColors.appBackgroundBlack,
               //         fontSize: ResponsiveUI.sp(50, context),
-              //         fontFamily: 'IBMPlexSerifRegular',
+              //         fontFamily: 'PoppinsRegular',
               //       ),
               //     ),
               //   ],
@@ -50,9 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Text(
                 "PACKIYALAKSHMI MURUGAN",
                 style: TextStyle(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.textColorWhite,
                   fontSize: ResponsiveUI.sp(50, context),
-                  fontFamily: 'IBMPlexSerifBold',
+                  fontFamily: 'PoppinsBold',
                 ),
               ),
               SizedBox(
@@ -61,9 +70,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Text(
                 "Mobile App Developer",
                 style: TextStyle(
-                  color: AppColors.appBackgroundBlack,
+                  color: AppColors.textColorWhite,
                   fontSize: ResponsiveUI.sp(30, context),
-                  fontFamily: 'IBMPlexSerifBoldItalic',
+                  fontFamily: 'PoppinsBoldItalic',
                 ),
               ),
               SizedBox(
@@ -75,7 +84,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    color: AppColors.appBackgroundBlack,
+                    color: AppColors.white,
+                    borderRadius: BorderRadius.circular(8),
                   ),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
@@ -89,9 +99,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text(
                           'Let\'s connect with me',
                           style: TextStyle(
-                            color: AppColors.appBackgroundWhite,
+                            color: AppColors.textColorBlack,
                             fontSize: ResponsiveUI.sp(18, context),
-                            fontFamily: 'IBMPlexSerifMedium',
+                            fontFamily: 'PoppinsMedium',
                           ),
                         ),
                         SizedBox(
@@ -100,23 +110,28 @@ class _HomeScreenState extends State<HomeScreen> {
                         Container(
                           // width: ResponsiveUI.w(24, context),
                           // height: ResponsiveUI.h(24, context),
-                          padding:
-                              EdgeInsets.all(ResponsiveUI.sp(4.2, context)),
+                          padding: EdgeInsets.only(
+                            left: ResponsiveUI.w(10, context),
+                            right: ResponsiveUI.w(10, context),
+                            top: ResponsiveUI.h(2, context),
+                            bottom: ResponsiveUI.h(2, context),
+                          ),
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                AppColors.gradientStartColor,
-                                AppColors.gradientMidColor,
-                                AppColors.gradientEndColor,
-                              ],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                            ),
+                            // gradient: LinearGradient(
+                            //   colors: [
+                            //     AppColors.gradientStartColor,
+                            //     AppColors.gradientMidColor,
+                            //     AppColors.gradientEndColor,
+                            //   ],
+                            //   begin: Alignment.topLeft,
+                            //   end: Alignment.bottomRight,
+                            // ),
+                            color: AppColors.black,
                           ),
                           child: Center(
-                            child: SvgPicture.asset(
-                              'lib/Resources/Images/OpensiteArrow.svg',
-                              width: ResponsiveUI.w(14, context),
+                            child: Image.asset(
+                              'lib/Resources/Images/ArrowWhite.png',
+                              width: ResponsiveUI.w(25, context),
                               height: ResponsiveUI.h(14, context),
                             ),
                           ),
@@ -135,17 +150,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: ResponsiveUI.h(50, context),
                     width: ResponsiveUI.w(50, context),
                     decoration: BoxDecoration(
-                      color: AppColors.assetBackground.withOpacity(0.5),
+                      color: AppColors.white.withOpacity(0.8),
                       shape: BoxShape.circle,
-                      gradient: LinearGradient(
-                        colors: [
-                          AppColors.gradientStartColor,
-                          AppColors.gradientMidColor,
-                          AppColors.gradientEndColor,
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
+                      // gradient: LinearGradient(
+                      //   colors: [
+                      //     AppColors.gradientStartColor,
+                      //     AppColors.gradientMidColor,
+                      //     AppColors.gradientEndColor,
+                      //   ],
+                      //   begin: Alignment.topLeft,
+                      //   end: Alignment.bottomRight,
+                      // ),
                     ),
                     child: Center(
                       child: SvgPicture.asset(
@@ -169,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                         color: AppColors.appBackgroundBlack,
                         fontSize: ResponsiveUI.sp(18, context),
-                        fontFamily: 'IBMPlexSerifBoldItalic',
+                        fontFamily: 'PoppinsBoldItalic',
                       ),
                     ),
                   ),
@@ -180,17 +195,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: ResponsiveUI.h(50, context),
                     width: ResponsiveUI.w(50, context),
                     decoration: BoxDecoration(
-                      color: AppColors.assetBackground.withOpacity(0.5),
+                      color: AppColors.white.withOpacity(0.8),
                       shape: BoxShape.circle,
-                      gradient: LinearGradient(
-                        colors: [
-                          AppColors.gradientStartColor,
-                          AppColors.gradientMidColor,
-                          AppColors.gradientEndColor,
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
+                      // gradient: LinearGradient(
+                      //   colors: [
+                      //     AppColors.gradientStartColor,
+                      //     AppColors.gradientMidColor,
+                      //     AppColors.gradientEndColor,
+                      //   ],
+                      //   begin: Alignment.topLeft,
+                      //   end: Alignment.bottomRight,
+                      // ),
                     ),
                     child: Center(
                       child: SvgPicture.asset(
@@ -214,7 +229,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                         color: AppColors.appBackgroundBlack,
                         fontSize: ResponsiveUI.sp(18, context),
-                        fontFamily: 'IBMPlexSerifBoldItalic',
+                        fontFamily: 'PoppinsBoldItalic',
                       ),
                     ),
                   ),
@@ -233,17 +248,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: ResponsiveUI.w(800, context),
                 height: ResponsiveUI.h(360, context),
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      AppColors.gradientStartColor,
-                      AppColors.gradientMidColor,
-                      AppColors.gradientEndColor,
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
+                  color: AppColors.white.withOpacity(0.7),
                   shape: BoxShape.circle,
                 ),
+                // child: Gif(
+                //   width: ResponsiveUI.w(800, context),
+                //   height: ResponsiveUI.h(360, context),
+                //   controller: _gifController,
+                //   autostart: Autostart.loop,
+                //   image: const AssetImage(
+                //     'lib/Resources/Gifs/ProfileGIF.gif',
+                //   ),
+                // ),
               ),
             ],
           ),
