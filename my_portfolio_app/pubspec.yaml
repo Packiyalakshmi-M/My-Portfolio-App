@@ -36,6 +36,7 @@ dependencies:
   flutter_mailer: ^2.1.2
   flutter_svg: ^2.0.10+1
   gif: ^2.3.0
+  html: ^0.15.5
   pdfx: ^2.8.0
   typewritertext: ^3.0.9
   url_launcher: ^6.3.1

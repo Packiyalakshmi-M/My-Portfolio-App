@@ -142,7 +142,7 @@ class _WorksScreenState extends State<WorksScreen> {
                                         3,
                                     child: Text(
                                       _worksScreenVM.works[index].title,
-                                      maxLines: 3,
+                                      maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                         color: AppColors.textColorWhite,

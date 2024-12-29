@@ -24,7 +24,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height - 80,
+      height: MediaQuery.of(context).size.height - 70,
       width: MediaQuery.of(context).size.width - 80,
       decoration: BoxDecoration(
         border: Border.all(

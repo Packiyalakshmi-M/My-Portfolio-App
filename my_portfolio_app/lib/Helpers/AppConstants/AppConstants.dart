@@ -1,6 +1,8 @@
 class AppConstants {
   static double baseHeight = 1024;
   static double baseWidth = 1440;
+  static double mblBaseHeight = 812;
+  static double mblBaseWidth = 375;
   static String linkedInProfile =
       "https://www.linkedin.com/in/packiyalakshmi-m-7a9844210/";
   static String gitHubLink = "https://github.com/Packiyalakshmi-M";
