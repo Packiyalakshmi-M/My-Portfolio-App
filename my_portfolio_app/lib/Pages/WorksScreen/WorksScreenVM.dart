@@ -84,7 +84,7 @@ class WorksScreenVM extends GetxController {
           ],
         ),
         WorkBO(
-          title: "Firebase Auth",
+          title: "Firebase Authentication",
           logo: "",
           description:
               "Implemented user creation & login feature by utilizing flutter firebase authentication library.",
@@ -100,6 +100,23 @@ class WorksScreenVM extends GetxController {
             "Enabled users to securely log in using email and password, with data verification handled by Firebase.",
             "Displayed user information on the home screen after login, allowing users to view their account details.",
             "Integrated a secure signout feature, enabling users to safely log out of the app and protect their session.",
+          ],
+        ),
+        WorkBO(
+          title: "Biometric Authentication",
+          logo: "",
+          description:
+              "Implemented biometric login feature by utilizing flutter local_auth library.",
+          techStack: "Flutter",
+          gitHubLink:
+              'https://github.com/Packiyalakshmi-M/Flutter-Biometric-Auth',
+          isExpanded: false,
+          techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
+          technologiesUsed: 'Flutter, Local auth, GitHub',
+          bulletPoints: [
+            "Implemented biometric authentication using the local_auth package to enable secure fingerprint and face recognition login.",
+            "Integrated dynamic UI that displays available authentication methods based on the device's biometric capabilities.",
+            "Configured platform-specific permissions and settings for Android and iOS to ensure seamless biometric functionality.",
           ],
         ),
         WorkBO(
