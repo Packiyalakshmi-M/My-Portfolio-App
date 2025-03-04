@@ -22,25 +22,25 @@ class ExperienceScreenVM extends GetxController {
           title: 'FLUTTER MOBILE APP DEVELOPER',
           assetPath: 'lib/Resources/Images/AvasoftLogo.jpeg',
           companyName: 'Avasoft Pvt Ltd, Chennai',
-          duration: 'Apr 2023 - Sept 2024',
+          duration: 'Sept 2022 - Sept 2024',
         ),
         MyExperienceBO(
           title: 'BACKEND LEAD DEVELOPER',
           assetPath: 'lib/Resources/Images/AvasoftLogo.jpeg',
           companyName: 'Avasoft Pvt Ltd, Chennai',
-          duration: 'Oct 2022 - May 2023',
+          duration: 'Jan 2022 - Aug 2022',
         ),
         MyExperienceBO(
           title: 'XAMARIN MOBILE APP DEVELOPER',
           assetPath: 'lib/Resources/Images/AvasoftLogo.jpeg',
           companyName: 'Avasoft Pvt Ltd, Chennai',
-          duration: 'May 2022 - Oct 2022',
+          duration: 'Jan 2022 - Aug 2022',
         ),
         MyExperienceBO(
           title: 'TRAINEE SOFTWARE ENGINEER',
           assetPath: 'lib/Resources/Images/AvasoftLogo.jpeg',
           companyName: 'Avasoft Pvt Ltd, Chennai',
-          duration: 'Nov 2021 - Apr 2022',
+          duration: 'Nov 2021 - Dec 2021',
         ),
       ];
     } catch (ex) {

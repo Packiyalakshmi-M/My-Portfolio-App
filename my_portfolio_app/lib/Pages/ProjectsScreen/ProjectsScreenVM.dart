@@ -36,7 +36,7 @@ class ProjectsScreenVM extends GetxController {
               'An Internal health goal management mobile app for tracking daily health goals, supporting both Tamil and English languages, with online and offline functionality. It serves as a watch companion app, retrieving data from the watch when connected, or from the mobile sensor when not.',
           techStack: 'Flutter mobile app',
           techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
-          technologiesUsed: "Flutter, Firebase, Android, iOS, MVVM, MobX, TFS",
+          technologiesUsed: "Flutter, Firebase, Android, iOS, Bloc, TFS",
           description: [
             "Built a health-tracking mobile app using Flutter, integrating AWS Amplify for authentication and Spotify SDK for music streaming.",
             "Transferred data between Android and iOS watch apps to the Flutter mobile app and vice versa using Flutter method channels and event channels.",
@@ -58,14 +58,13 @@ class ProjectsScreenVM extends GetxController {
           techStack: 'Flutter mobile app',
           techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
           technologiesUsed:
-              "Flutter, Firebase, Node JS, MySQL, MongoDB, Git, MVVM, MobX",
+              "Flutter, Firebase, Node JS, MySQL, MongoDB, Git, MVVM, MobX, GetX, Provider, Bloc",
           description: [
             "Developed a variety of UI templates, including customized bottom navigation bars, popups, and login screens with biometric authentication.",
-            "Implemented biometric authentication using MobX state management and MVVM architecture to ensure robust and scalable applications.",
+            "Implemented various functionalities, including Firebase Authentication, Push Notifications, Analytics, Crashlytics, Firestore Database, AdMob, Google Maps, and AWS Cognito Authentication. Additionally, integrated secure storage solutions, local databases such as Hive, SQLite, and SharedPreferences, as well as localization support. Developed state management solutions and incorporated features like image and file pickers, audio recording, and more to enhance app functionality and user experience.",
             "Enhanced UI responsiveness and ensured smooth transitions between different app screens.",
             "Created highly reusable and maintainable components that reduced the overall project development time.",
             "Coordinated with UI/UX designers to ensure templates were fully responsive and adaptable across different device types.",
-            "Worked on improving app performance by optimizing the rendering of the UI components.",
             "Applied state management techniques to maintain real-time UI changes with minimal re-rendering.",
           ],
           playStoreLink: "",

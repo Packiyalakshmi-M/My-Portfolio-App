@@ -9,5 +9,5 @@ class AppConstants {
   static String phoneNumber = "+919626508568";
   static String email = "packiya2706.m@gmail.com";
   static String resumeUrl =
-      "https://drive.google.com/uc?export=view&id=1DSATy4rUNc5yK7Zwgwu8-pBijS_TgwI_";
+      "https://drive.google.com/uc?export=view&id=1a_g5CjG3lBMkCF3XBo6jHemWvskiwiZf";
 }

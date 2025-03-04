@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio_app/Helpers/AppConstants/AppConstants.dart';
 import 'package:my_portfolio_app/Helpers/ResponsiveUI.dart';
-import 'package:my_portfolio_app/Helpers/Reusables/GradientText.dart';
+// import 'package:my_portfolio_app/Helpers/Reusables/GradientText.dart';
 import 'package:my_portfolio_app/Helpers/Utilities/Utilities.dart';
 import 'package:my_portfolio_app/Resources/AppColors/AppColors.dart';
 import 'package:typewritertext/typewritertext.dart';

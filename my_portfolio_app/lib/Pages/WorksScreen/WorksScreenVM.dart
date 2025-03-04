@@ -47,21 +47,59 @@ class WorksScreenVM extends GetxController {
           ],
         ),
         WorkBO(
-          title: "Todo App",
+          title: "E-Commerce App",
           logo: "",
           description:
-              "Implemented todo application by utilizing firebase for authentication & integrated API for data manipulations.",
+              "Developed an E-Commerce app that displays products in a grid layout and allows users to add them to a cart, leveraging Bloc for state management and Hive for local storage.",
           techStack: "Flutter",
-          gitHubLink: 'https://github.com/Packiyalakshmi-M/TodoApp',
+          gitHubLink: 'https://github.com/Packiyalakshmi-M/ecommerce_app',
           isExpanded: false,
           techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
-          technologiesUsed: 'Flutter, Firebase, GitHub',
+          technologiesUsed: 'Flutter, BLoC, Hive, Dio, GetIt, GitHub',
           bulletPoints: [
-            "Built a Todo application using Flutter, with user authentication managed via Firebase Authentication.",
-            "Integrated a RESTful API to handle data manipulation and persistent storage of todo items.",
-            "Designed and implemented a signup/signin feature using secure, real-time Firebase services.",
-            "Created a user-friendly UI, allowing users to add, update, and delete todos with ease.",
-            "Applied Flutter best practices to ensure app scalability, maintainability, and smooth performance.",
+            "Implemented Product Listing with a grid layout, displaying product images, titles, prices, and categories.",
+            "Developed Cart Management with add, remove, and quantity update functionalities using BLoC state management.",
+            "Integrated Dio for API calls, fetching product data from a REST API and mapping it to ProductBO models.",
+            "Implemented Hive local storage to persist cart data even after app restarts, ensuring seamless user experience.",
+            "Designed a structured folder architecture for scalability, including BLoC for state management, services for API and local storage, and UI components.",
+            "Optimized total price calculation in the cart screen, ensuring real-time updates as users modify product quantities.",
+          ],
+        ),
+        WorkBO(
+          title: "Car Speed Monitor App",
+          logo: "",
+          description:
+              "Developed a Car Speed Monitor app that simulates real-time speed tracking of two cars, leveraging BLoC for efficient state management and dynamic UI updates.",
+          techStack: "Flutter",
+          gitHubLink: 'https://github.com/Packiyalakshmi-M/car_speed_monitor',
+          isExpanded: false,
+          techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
+          technologiesUsed: 'Flutter, BLoC, Dart Math, Git',
+          bulletPoints: [
+            "Implemented Real-time Speed Simulation where two car speeds update dynamically every second.",
+            "Utilized BLoC State Management for efficient handling of speed updates and UI changes.",
+            "Developed a Speed Alert Mechanism that changes text color to red when the speed exceeds 100 km/hr.",
+            "Leveraged Dart Math Library for random speed generation within a realistic range.",
+            "Designed a lightweight and scalable architecture for smooth cross-platform performance.",
+          ],
+        ),
+        WorkBO(
+          title: "Currency Converter App",
+          logo: "",
+          description:
+              "Developed a Currency Converter app that allows users to convert currency from one unit to another using real-time exchange rates. The app follows the MVVM architecture and utilizes GetX for state management.",
+          techStack: "Flutter",
+          gitHubLink:
+              'https://github.com/Packiyalakshmi-M/currency_converter_app',
+          isExpanded: false,
+          techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
+          technologiesUsed: 'Flutter, Dart, GetX, GetIt, HTTP API, Git',
+          bulletPoints: [
+            "Implemented Real-time Currency Conversion using an external API to fetch live exchange rates.",
+            "Followed MVVM Architecture to ensure a structured and maintainable codebase.",
+            "Utilized GetX State Management for efficient UI updates and data handling.",
+            "Integrated GetIt for Dependency Injection, improving code scalability and testability.",
+            "Developed an API Service Layer using the HTTP package to communicate with the exchange rate API.",
           ],
         ),
         WorkBO(
@@ -120,6 +158,66 @@ class WorksScreenVM extends GetxController {
           ],
         ),
         WorkBO(
+          title: "Image Picker with BLoC",
+          logo: "",
+          description:
+              "Implemented an image selection feature using Flutter's image_picker package, structured with BLoC state management and dependency injection.",
+          techStack: "Flutter",
+          gitHubLink:
+              'https://github.com/Packiyalakshmi-M/flutter_native_communicator',
+          isExpanded: false,
+          techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
+          technologiesUsed: 'Flutter, BLoC, Get_it, Image Picker, GitHub',
+          bulletPoints: [
+            "Implemented image selection from the gallery and camera using the image_picker package, ensuring smooth user interaction.",
+            "Utilized BLoC state management to handle UI state updates efficiently for a responsive and maintainable architecture.",
+            "Separated business logic and UI by structuring the app with an ImagePickerService implementing the IImagePickerService interface.",
+            "Used the get_it package for dependency injection, promoting modular and testable code architecture.",
+            "Encapsulated image source selection within a custom bottom sheet for a user-friendly and reusable design component.",
+            "Handled edge cases, such as null selections and permission checks, to enhance app stability.",
+          ],
+        ),
+        WorkBO(
+          title: "State Management - BLoC",
+          logo: "",
+          description:
+              "Implemented an increment and decrement counter app using the BLoC state management library for efficient state handling.",
+          techStack: "Flutter",
+          gitHubLink:
+              'https://github.com/Packiyalakshmi-M/Bloc_State_Management',
+          isExpanded: false,
+          techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
+          technologiesUsed: 'Flutter, BLoC, GitHub',
+          bulletPoints: [
+            "Implemented increment and decrement counter functionality using the BLoC state management approach to efficiently separate business logic from UI.",
+            "Utilized Bloc for simplified state management, ensuring a reactive and structured approach to state updates.",
+            "Leveraged BLoC's event-driven architecture to manage counter events and state changes seamlessly.",
+            "Ensured scalability and maintainability by structuring the app with BLoC's clean separation of concerns.",
+            "Improved performance by eliminating unnecessary widget rebuilds and ensuring efficient state propagation across the application.",
+          ],
+        ),
+        WorkBO(
+          title: "Battery Percentage via Platform Channels",
+          logo: "",
+          description:
+              "Implemented battery percentage retrieval using Flutter platform channels to communicate between Dart and native Android code.",
+          techStack: "Flutter",
+          gitHubLink:
+              'https://github.com/YourGitHubUsername/battery_percentage_app',
+          isExpanded: false,
+          techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
+          technologiesUsed:
+              'Flutter, Platform Channels, Kotlin, MethodChannel, GitHub',
+          bulletPoints: [
+            "Implemented Flutter platform channels to fetch battery percentage from native Android using Kotlin.",
+            "Created a MethodChannel to enable communication between Flutter and the Android native layer.",
+            "Used the Android BatteryManager API to retrieve the battery percentage in Kotlin.",
+            "Handled method calls and responses to ensure smooth interaction between Flutter and the native platform.",
+            "Implemented error handling for cases where battery information is unavailable.",
+            "Ensured seamless integration of platform-specific functionality while maintaining a Flutter-first approach.",
+          ],
+        ),
+        WorkBO(
           title: "State Management - Provider",
           logo: "",
           description:
@@ -168,6 +266,24 @@ class WorksScreenVM extends GetxController {
             "Implemented the increment counter feature using GetX for state management, achieving seamless and efficient state updates with minimal boilerplate code.",
             "Utilized GetX's reactive state management to automatically update the UI when the counter value changes, ensuring smooth user interaction.",
             "Enhanced app performance by leveraging GetX's lightweight architecture, reducing memory usage and increasing responsiveness.",
+          ],
+        ),
+        WorkBO(
+          title: "Todo App",
+          logo: "",
+          description:
+              "Implemented todo application by utilizing firebase for authentication & integrated API for data manipulations.",
+          techStack: "Flutter",
+          gitHubLink: 'https://github.com/Packiyalakshmi-M/TodoApp',
+          isExpanded: false,
+          techStackLogo: 'lib/Resources/Images/SkillsImages/Flutter.png',
+          technologiesUsed: 'Flutter, Firebase, GitHub',
+          bulletPoints: [
+            "Built a Todo application using Flutter, with user authentication managed via Firebase Authentication.",
+            "Integrated a RESTful API to handle data manipulation and persistent storage of todo items.",
+            "Designed and implemented a signup/signin feature using secure, real-time Firebase services.",
+            "Created a user-friendly UI, allowing users to add, update, and delete todos with ease.",
+            "Applied Flutter best practices to ensure app scalability, maintainability, and smooth performance.",
           ],
         ),
         WorkBO(

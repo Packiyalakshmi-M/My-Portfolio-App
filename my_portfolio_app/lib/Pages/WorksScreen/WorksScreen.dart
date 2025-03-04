@@ -140,14 +140,19 @@ class _WorksScreenState extends State<WorksScreen> {
                                     width: (MediaQuery.of(context).size.width -
                                             270) /
                                         3,
-                                    child: Text(
-                                      _worksScreenVM.works[index].title,
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                        color: AppColors.textColorWhite,
-                                        fontSize: ResponsiveUI.sp(40, context),
-                                        fontFamily: 'PoppinsBold',
+                                    child: Tooltip(
+                                      message:
+                                          _worksScreenVM.works[index].title,
+                                      child: Text(
+                                        _worksScreenVM.works[index].title,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          color: AppColors.textColorWhite,
+                                          fontSize:
+                                              ResponsiveUI.sp(40, context),
+                                          fontFamily: 'PoppinsBold',
+                                        ),
                                       ),
                                     ),
                                   ),
